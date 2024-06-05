@@ -1,0 +1,87 @@
+@mixin font {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.section-sale {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 805px;
+    background-image: url('../images/Header Image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .sale {
+        width: 845px;
+        height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(90deg, #00ffa7 0%, #0e4dfd 100%);
+        border-top-right-radius: 235px;
+        border-bottom-right-radius: 235px;
+
+        .sale-headline {
+            padding-bottom: 70px;
+
+            .headline-font {
+                @include font;
+                font-size: 65px;
+                color: #ffffff;
+            }
+        }
+
+        .sale-button {
+            width: 308px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 47px;
+
+            .button-font {
+                display: block;
+                padding: 32px 10px;
+                @include font;
+                font-size: 30px;
+                color: #1d2c46;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .section-sale {
+        width: inherit;
+        height: 300px;
+
+        .sale {
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            padding: 20px 10px;
+
+            .sale-headline {
+                padding-bottom: 30px;
+
+                .headline-font {
+                    font-size: 40px;
+                }
+            }
+
+            .sale-button {
+                width: 200px;
+
+                .button-font {
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+}

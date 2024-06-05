@@ -1,0 +1,189 @@
+@mixin font {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.section-products {
+    padding: 0px 0px 70px 129px;
+
+    .products-headline {
+        @include font;
+        font-size: 60px;
+        color: #1d2c46;
+    }
+
+    h2 {
+        padding-bottom: 22px;
+    }
+
+
+    .products-items {
+        height: auto;
+        position: relative;
+        display: flex;
+        box-sizing: border-box;
+        padding-top: 76px;
+        min-width: 0;
+
+        .item-shoes {
+            width: inherit !important;
+            height: auto;
+            position: relative;
+            box-sizing: border-box;
+
+            .shoes-image {
+                width: 401px;
+                height: 286px;
+                padding-bottom: 36px;
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                    -webkit-box-shadow: 0 0 6px 0 #000000;
+                    box-shadow: 0 0 6px 0 #000000;
+                }
+            }
+
+            .shoes-description {
+                display: flex;
+                justify-content: space-between;
+
+                .description-title {
+                    align-self: flex-end;
+                    @include font;
+                    font-size: 20px;
+                    color: #1d2c46;
+                }
+
+                .description-price {
+                    text-align: right;
+
+                    .price-lower {
+                        @include font;
+                        opacity: 0.502;
+                        font-size: 12px;
+                        letter-spacing: 0px;
+                        text-transform: uppercase;
+                        color: #000000;
+                        font-weight: 400;
+                    }
+
+                    .price-higer {
+                        position: relative;
+                        @include font;
+                        font-size: 18px;
+                        letter-spacing: 0px;
+                        text-transform: uppercase;
+                        color: #000000;
+                        font-weight: 400;
+                    }
+
+                    .price-higer:before {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        top: 50%;
+                        right: 0;
+                        border-top: 1px solid;
+                        border-color: inherit;
+
+                        -webkit-transform: rotate(-5deg);
+                        -moz-transform: rotate(-5deg);
+                        -ms-transform: rotate(-5deg);
+                        -o-transform: rotate(-5deg);
+                        transform: rotate(-5deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .products-items::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 335px;
+        height: 501px;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9999999999999999) 100%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-products {
+        padding: 0px 0px 40px 20px;
+
+        .products-headline {
+            font-size: 35px;
+        }
+
+        .products-items {
+            padding-top: 30px;
+
+            .item-shoes {
+                width: inherit !important;
+                height: auto;
+                position: relative;
+                box-sizing: border-box;
+    
+                .shoes-image {
+                    width: 200px;
+                    height: auto;
+                    padding-bottom: 26px;
+    
+                    img {
+                        
+                    }
+                }
+    
+                .shoes-description {
+    
+                    .description-title {
+                        font-size: 18px;
+                    }
+    
+                    .description-price {
+                        text-align: right;
+    
+                        .price-lower {
+                            font-size: 10px;
+                        }
+    
+                        .price-higer {
+                            font-size: 16px;
+                        }
+    
+                        .price-higer:before {
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            top: 50%;
+                            right: 0;
+                            border-top: 1px solid;
+                            border-color: inherit;
+    
+                            -webkit-transform: rotate(-5deg);
+                            -moz-transform: rotate(-5deg);
+                            -ms-transform: rotate(-5deg);
+                            -o-transform: rotate(-5deg);
+                            transform: rotate(-5deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .products-items::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 352px;
+            background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9999999999999999) 100%);
+        }
+    }
+
+}

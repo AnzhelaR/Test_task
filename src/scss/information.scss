@@ -1,0 +1,176 @@
+@mixin font {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+
+    overflow: hidden;
+
+    .section-information {
+        padding: 119px 157px 0 129px;
+
+        .section-welcome {
+            
+            h2 {
+                @include font;
+                font-size: 65px;
+                color: #1d2c46;
+            }
+
+            .welcome-headline {
+                padding-bottom: 35px;
+            }
+
+            .welcome-caption {
+                padding-bottom: 59px;
+
+                .caption-headline {
+                    @include font;
+                    font-weight: 400;
+                    font-size: 30px;
+                    color: #2b2b2b;
+                }
+
+            }
+
+            .welcome-description {
+                padding-bottom: 128px;
+
+                .description-text {
+                    @include font;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #000;
+                }
+            }
+
+
+        }
+
+        .section-wardrobe {
+            display: flex;
+            padding-bottom: 224px;
+
+            .wardrobe-image {
+                position: relative;
+                margin-right: 105px;
+                
+                .image {
+                    position: relative;
+                    width: 528px;
+                    height: 791px;
+                    z-index: 10;
+                }
+
+                .image-background{
+                    width: 528px;
+                    height: 791px;
+                    background-image: linear-gradient(0deg, #00ffa7 0%, #0e4dfd 100%);                    
+                    position: absolute;
+                    top: -30px;
+                    right: -30px;
+                }
+            }
+
+            .wardrobe-text {
+                align-self: center;
+
+                h3 {
+                    padding-bottom: 59px;
+
+                    span {
+                        font-weight: 800;
+                    }
+                }
+
+                .text-first-item {
+                    @include font;
+                    font-size: 32px;
+                    color: #1d2c46;
+                }
+
+                .text-second-item {
+                    @include font;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    main {
+        .section-information {
+            padding: 20px 20px 0;
+
+            .section-welcome {
+
+                h2 {
+                    font-size: 45px;
+                }
+
+                .welcome-caption {
+                    padding-bottom: 30px;
+
+                    .caption-headline {
+                        font-size: 18px;
+                    }
+                }
+
+                .welcome-description {
+                    padding-bottom: 60px;
+
+                    .description-text {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .section-wardrobe {
+                flex-direction: column;
+                padding-bottom: 60px;
+
+                .wardrobe-image {
+
+                    margin: auto;
+
+                    .image {
+                        width: 250px;
+                        height: 375px;
+                    }
+
+                    .image-background{
+                        top: -20px;
+                        right: -20px;
+                        width: 250px;
+                        height: 375px;
+                    }
+                }
+
+                .wardrobe-text {
+                    align-self: center;
+                    padding-top: 40px;
+
+                    h3 {
+                        padding-bottom: 30px;
+                    }
+
+                    .text-first-item {
+                        font-size: 28px;
+                    }
+
+                    .text-second-item {
+                        font-size: 14px;
+                        line-height: 26px;
+                    }
+                }
+
+            }
+        }
+    }
+}

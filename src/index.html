@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {})
+
+<body>
+
+
+    @@include('html/header.html', {})
+
+    <main>
+        <section class="section-sale">
+            <div class="sale">
+                <div class="sale-headline">
+                    <h1 class="headline-font">SALE UP TO 70% OFF</h1>
+                </div>
+                <div class="sale-button">
+                    <a class="button-font" href="">
+                        SHOP NOW
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-information">
+            @@include('html/information.html', {})
+        </section>
+
+        @@include('html/products.html', {})
+    </main>
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
+</body>
+
+</html>
